@@ -1,7 +1,5 @@
 # TaxiSimulatorOnGraph
 
-# My Paper Title
-
 This repository is the official implementation of "Optimizing Large-Scale Fleet Management on a Road
 Network using Multi-Agent Deep Reinforcement
 Learning with Graph Neural Network".

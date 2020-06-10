@@ -230,9 +230,11 @@ def evaluate(city: City,
         std = 0
     print("Total percentage 2:", mean, std)
 
+
+
     ## this is for test.
     # export final result.
-    
+
     if export_result:
         f.write('%d\t%d\t%.4f\n' % (total_assigned_n, total_missed_n, total_p))
         f.close()
