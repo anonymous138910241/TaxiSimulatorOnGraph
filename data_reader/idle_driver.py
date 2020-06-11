@@ -4,7 +4,6 @@ import numpy as np
 import random
 
 
-
 def get_total_driver_count(input_file_name, output_file_name, is_idle=False):
     data = pd.read_csv(input_file_name)
     converted_data = data.groupby(['time_stamp']).agg('sum').reset_index()

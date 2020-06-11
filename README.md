@@ -8,13 +8,16 @@ we will disclose the data after consulting with the company.
 
 ## Requirements
 
-To install requirements:
+We use Deep Graph Library(DGL, https://github.com/dmlc/dgl) 
+and OSMnx(https://github.com/gboeing/osmnx)
+to handle road network.
+For backend of DGL, we use PyTorch.
+
+To install all of the requirements:
 
 ```setup
 pip install -r requirements.txt
 ```
-
-> 📋Describe how to set up the environment, e.g. pip/conda/docker commands, download datasets, etc...
 
 ## Training and Evaluation
 
