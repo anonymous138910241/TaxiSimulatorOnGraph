@@ -2,18 +2,18 @@ import pandas as pd
 import osmnx as ox
 import networkx as nx
 import time
-import numpy as np
+import random
+from h3 import h3
 
-
-def read_organized_order(file_name):
-    '''
-    remove coulmn name
-    :param file_name:
-    :return:
-    '''
-    order_data = pd.read_csv(file_name)
-    # count = order_data.groupby(['origin_node_index', 'start_time_in_time_interval']).size()
-    return order_data.values
+# def read_organized_order(file_name):
+#     '''
+#     remove coulmn name
+#     :param file_name:
+#     :return:
+#     '''
+#     order_data = pd.read_csv(file_name)
+#     # count = order_data.groupby(['origin_node_index', 'start_time_in_time_interval']).size()
+#     return order_data.values
 
 
 def wgx_to_edge_index(G: nx.MultiDiGraph, data: pd.DataFrame, wgsx, wgsy):
@@ -24,9 +24,6 @@ def wgx_to_edge_index(G: nx.MultiDiGraph, data: pd.DataFrame, wgsx, wgsy):
     #closest_edges = list(map(lambda x: G.edges[x[0], x[1], 0]['osmid'], closest_edges))
     print(closest_edges[0:20])
     return pd.Series(closest_edges)
-
-import random
-from h3 import h3
 
 
 def h3_to_edge_index(cell_id_data_set, cell_id):

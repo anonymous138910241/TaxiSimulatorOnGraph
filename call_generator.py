@@ -1,6 +1,6 @@
 from miscellaneous import *
 from city import City
-from data_reader.call_reader import read_organized_order
+import pandas as pd
 import random
 
 
@@ -26,7 +26,7 @@ class BootstrapCallGenerator(CallGenerator):
         :param default_wait_time: Default wait time. There is no reliable data for call wait time(remaining time).
         We set this value to 10.
         '''
-        self.real_order = read_organized_order(file_path)
+        self.real_order = pd.read_csv(file_path).values
         self.p = sample_probability
         self.day_orders = None
         self.time_interval = time_interval
